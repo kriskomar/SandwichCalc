@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SandwichDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CurrencyModifier" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sandwiches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SandwichName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SandwichModifier" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SandwichDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Currency" EntityType="Self.Currency" />
+    <EntitySet Name="Sandwiches" EntityType="Self.Sandwiches" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SandwichDBModelStoreContainer" CdmEntityContainer="SandwichDBEntities">
+    <EntitySetMapping Name="Currency">
+      <EntityTypeMapping TypeName="SandwichDBModel.Currency">
+        <MappingFragment StoreEntitySet="Currency">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CurrencyModifier" ColumnName="CurrencyModifier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sandwiches">
+      <EntityTypeMapping TypeName="SandwichDBModel.Sandwiches">
+        <MappingFragment StoreEntitySet="Sandwiches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SandwichName" ColumnName="SandwichName" />
+          <ScalarProperty Name="SandwichModifier" ColumnName="SandwichModifier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
