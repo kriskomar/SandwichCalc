@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Sandwich Calculator";
+}
+
+@model SanwichCalc.Models.Home.IndexViewModel
+
+<div class="jumbotron">
+    <h1 class="text-center">Calculate Sandwich Currency</h1>
+    <div class="row">
+        <div class="col-md-12 calculator center">
+            <div class="calculator-element">
+                <input id="left-input" type="text" class="currency-input"/>
+                <div>@Html.DropDownList("Currencies", Model.Currencies, new {type="number"})</div>
+            </div>
+            <div class="calculator-element">
+                <img src="~/Images/equal-sign.png" alt="" class="equals-sign"/>
+            </div>
+            <div class="calculator-element">
+                <input id="sandwich-input" type="text" class="currency-input" />
+                <div>@Html.DropDownList("Sandwiches", Model.Sandwiches, new { type = "number"})</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/sandwichcalc.js"></script>
+}
